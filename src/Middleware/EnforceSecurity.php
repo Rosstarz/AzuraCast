@@ -63,7 +63,7 @@ class EnforceSecurity implements MiddlewareInterface
         if ('*' === $frameOptions) {
             $response = $response->withoutHeader('X-Frame-Options');
         } else {
-            $response = $response->withHeader('X-Frame-Options', 'DENY');
+            $response = $response->withHeader('X-Frame-Options', 'SAMEORIGIN');
         }
 
         return $response;
